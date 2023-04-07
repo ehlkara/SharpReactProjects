@@ -20,16 +20,35 @@ function App() {
 
   const deleteTaskById = (id) => {
     const afterDeletingTask = tasks.filter((task) => {
-      return task.id !==id;
+      return task.id !== id;
     });
 
     setTasks(afterDeletingTask);
+  };
+
+  const editTaskById = (id, updatedTitle, updatedTaskDesc) => {
+    const afterUpdatedTask = tasks.map((task) => {
+      if (task.id === id) {
+        return {
+          id,
+          title: updatedTitle,
+          taskDesc: updatedTaskDesc,
+        };
+      }
+      return task;
+    });
+
+    setTasks(afterUpdatedTask);
   };
   return (
     <div className="App">
       <TaskCreate onCreate={createTask} />
       <h1>Tasks</h1>
-      <TaskList tasks={tasks} onDelete={deleteTaskById} />
+      <TaskList
+        tasks={tasks}
+        onDelete={deleteTaskById}
+        onUpdate={editTaskById}
+      />
     </div>
   );
 }
