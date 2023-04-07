@@ -1,16 +1,21 @@
-function SerachHeader({search}) {
-
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        search('ehlullah');
-    }
-
-  return <div className="searchDiv">
-    <form onSubmit={handleFormSubmit}>
+import { useState } from "react";
+function SearchHeader({ search }) {
+  const [valueInput, setValue] = useState("");
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    search(valueInput);
+  };
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+  return (
+    <div className="searchDiv">
+      <form onSubmit={handleFormSubmit}>
         <label>What is your search?</label>
-        <input/>
-    </form>
-  </div>;
+        <input value={valueInput} onChange={handleChange} />
+      </form>
+    </div>
+  );
 }
 
-export default SerachHeader;
+export default SearchHeader;

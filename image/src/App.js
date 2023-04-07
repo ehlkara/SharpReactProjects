@@ -1,16 +1,21 @@
 import "./App.css";
-import SerachHeader from "./SearchHeader";
+import SearchHeader from "./SearchHeader";
 import searchImages from "./api";
+import { useState } from "react";
+import ImageList from "./components/ImageList";
 
 function App() {
-  const handleSubmit = (term) => {
-    console.log(term);
-    searchImages(term);
+  const [images, setImgaes] = useState([])
+
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term);
+    setImgaes(result);
   };
 
   return (
     <div className="App">
-      <SerachHeader search={handleSubmit} />
+      <SearchHeader search={handleSubmit} />
+      <ImageList imagesPlaceHolder={images}/>
     </div>
   );
 }
