@@ -7,9 +7,9 @@
 
 .cardDiv {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card {
@@ -24,22 +24,27 @@
   color: red;
 }
 
-.cardDeleteBtn{
-  width: 100px;
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-    background-color: rebeccapurple;
-    color: white;
+.cardDeleteBtn {
+  width: 200px;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
 }
 
 .refreshDiv {
   text-align: center;
 }
 
-.prevNextBtn{
+.prevNextBtn {
   border: none;
   background-color: white;
   font-size: 20px;
   color: red;
+}
+
+.courseTitleAndButton {
+  text-align: center;
+  margin-bottom: 20px;
 }
