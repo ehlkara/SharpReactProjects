@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import Calculate from "./Calculate";
 
 export const NumberContext = React.createContext();
@@ -20,7 +20,9 @@ const reducer = (state, action) => {
 
 function App() {
   const [count, dispatch] = useReducer(reducer, initialValue);
-
+  useEffect(() => {
+    console.log("Rendered");
+  }, [count]);
   return (
     <div className="App">
       <NumberContext.Provider value={{ count: count, dispatch: dispatch }}>
