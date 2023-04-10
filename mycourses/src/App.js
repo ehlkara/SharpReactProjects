@@ -9,6 +9,14 @@ function App() {
 
   const [loading, setLoading] = useState(true);
 
+  const deleteCourse = (courseid) => {
+    const afterDeletedCourses = courses.filter(
+      (course) => course.id !== courseid
+    );
+
+    setCourses(afterDeletedCourses);
+  };
+
   const fetchCourses = async () => {
     setLoading(true);
     try {
@@ -26,7 +34,20 @@ function App() {
 
   return (
     <div className="App">
-      {loading ? <Loading /> : <Courses courses={courses} />}
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          {courses.length === 0 ? (
+            <div className="refreshDiv">
+              <h2>Your courses are deleted!</h2>
+              <button className="cardDeleteBtn" onClick={() => {fetchCourses()}}>Refresh</button>
+            </div>
+          ) : (
+            <Courses courses={courses} removeCourse={deleteCourse} />
+          )}
+        </>
+      )}
     </div>
   );
 }
