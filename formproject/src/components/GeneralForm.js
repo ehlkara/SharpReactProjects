@@ -15,7 +15,7 @@ export default function GeneralForm() {
 
   return (
     <form>
-      <div>
+      <div className="inputDiv">
         <label>Email</label>
         <input
           type="email"
@@ -25,7 +25,7 @@ export default function GeneralForm() {
           placeholder="Enter your email..."
         />
       </div>
-      <div>
+      <div className="inputDiv">
         <label>Age</label>
         <input
           type="number"
@@ -35,7 +35,7 @@ export default function GeneralForm() {
           placeholder="Enter your age..."
         />
       </div>
-      <div>
+      <div className="inputDiv">
         <label>Password</label>
         <input
           type="password"
@@ -45,7 +45,7 @@ export default function GeneralForm() {
           placeholder="Enter your password..."
         />
       </div>
-      <div>
+      <div className="inputDiv">
         <label>Confirm Password</label>
         <input
           type="password"
