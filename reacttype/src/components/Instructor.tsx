@@ -1,11 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { instructorProps } from './propstypes';
 
-type instructorProps = {
-    instructorNameLastName: {
-        firstName: string,
-        lastName: string
-    }
-}
 
 export default function Instructor(props: instructorProps) {
     return (
