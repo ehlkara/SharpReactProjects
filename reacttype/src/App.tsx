@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/Home';
 import Instructor from './components/Instructor';
 import InstructorList from './components/InstructorList';
+import Request from './components/Request';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Home name="Ehlullah" courseNumber={15} isBest />
       <Instructor instructorNameLastName={instructor} />
       <InstructorList instructorNameLastNameList= {instructorList}/>
+      <Request status="success"/>
     </div>
   );
 }
