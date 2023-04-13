@@ -9,6 +9,7 @@ import LoginCheck from './components/LoginCheck';
 import ReducerExample from './components/ReducerExample';
 import ContextExample from './components/ContextExample';
 import { ThemeContextProvider } from './components/ThemeContext';
+import RefExample from './components/RefExample';
 
 function App() {
 
@@ -37,10 +38,11 @@ function App() {
       <Request status="success"/>
       <EventActions/> */}
       {/* <LoginCheck/> */}
-      <ReducerExample />
+      {/* <ReducerExample />
       <ThemeContextProvider>
         <ContextExample />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+      <RefExample/>
     </div>
   );
 }
