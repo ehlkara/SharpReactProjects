@@ -6,6 +6,7 @@ import InstructorList from './components/InstructorList';
 import Request from './components/Request';
 import EventActions from './components/EventActions';
 import LoginCheck from './components/LoginCheck';
+import ReducerExample from './components/ReducerExample';
 
 function App() {
 
@@ -33,7 +34,8 @@ function App() {
       <InstructorList instructorNameLastNameList= {instructorList}/>
       <Request status="success"/>
       <EventActions/> */}
-      <LoginCheck/>
+      {/* <LoginCheck/> */}
+      <ReducerExample/>
     </div>
   );
 }
