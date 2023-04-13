@@ -5,6 +5,7 @@ import Instructor from './components/Instructor';
 import InstructorList from './components/InstructorList';
 import Request from './components/Request';
 import EventActions from './components/EventActions';
+import LoginCheck from './components/LoginCheck';
 
 function App() {
 
@@ -27,11 +28,12 @@ function App() {
   }];
   return (
     <div className="App">
-      <Home name="Ehlullah" courseNumber={15} isBest />
+      {/* <Home name="Ehlullah" courseNumber={15} isBest />
       <Instructor instructorNameLastName={instructor} />
       <InstructorList instructorNameLastNameList= {instructorList}/>
       <Request status="success"/>
-      <EventActions/>
+      <EventActions/> */}
+      <LoginCheck/>
     </div>
   );
 }
