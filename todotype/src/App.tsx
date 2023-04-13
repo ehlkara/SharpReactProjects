@@ -38,12 +38,12 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div>
-        <input type='text' value={task} name='task' placeholder='Enter Your Task...' onChange={handleChange} />
-        <input type='number' value={workDay} name='workDay' placeholder='How many days should you complete...' onChange={handleChange} />
-        <button onClick={addNewTask}>New Add Task</button>
+      <div className='maincard'>
+        <input className='maincardinput' type='text' value={task} name='task' placeholder='Enter Your Task...' onChange={handleChange} />
+        <input className='maincardinput' type='number' value={workDay} name='workDay' placeholder='How many days should you complete...' onChange={handleChange} />
+        <button className='maincardbutton' onClick={addNewTask}>New Add Task</button>
       </div>
-      <div>
+      <div className='todocard'>
         {todoList.map((task: todoType, index: number) => {
           return <TodoItem key={index} task={task} deleteTask={deleteTask} />
         })}
