@@ -18,6 +18,7 @@ import { LessonAppBar } from './components/LessonAppBar';
 import { LessonImageList } from './components/LessonImageList';
 import { LessonPaper } from './components/LessonPaper';
 import { LessonLink } from './components/LessonLink';
+import { LessonBreadsCrump } from './components/LessonBreadsCrump';
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
       {/* <LessonAppBar /> */}
       {/* <LessonImageList /> */}
       {/* <LessonPaper /> */}
-      <LessonLink />
+      {/* <LessonLink /> */}
+      <LessonBreadsCrump />
     </div>
   );
 }
