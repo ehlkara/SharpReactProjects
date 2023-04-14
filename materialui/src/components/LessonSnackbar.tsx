@@ -26,7 +26,7 @@ export const LessonSnackbar = () => {
     return (
         <div>
             <Button onClick={handleClick}>Open Snackbar</Button>
-            <Snackbar open={openSnackbar} message='You got error message' action={action} autoHideDuration={2000} onClose={handleClose} />
+            <Snackbar open={openSnackbar} message='You got error message' action={action} autoHideDuration={2000} onClose={handleClose} anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} />
         </div>
     )
 }
