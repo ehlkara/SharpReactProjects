@@ -26,6 +26,7 @@ import { LessonBottomNavigation } from './components/LessonBottomNavigation';
 import { LessonAvatar } from './components/LessonAvatar';
 import { LessonList } from './components/LessonList';
 import { LessonToolTip } from './components/LessonToolTip';
+import { LessonAlert } from './components/LessonAlert';
 
 function App() {
   return (
@@ -55,7 +56,8 @@ function App() {
       {/* <LessonBottomNavigation /> */}
       {/* <LessonAvatar /> */}
       {/* <LessonList /> */}
-      <LessonToolTip />
+      {/* <LessonToolTip /> */}
+      <LessonAlert />
     </div>
   );
 }
