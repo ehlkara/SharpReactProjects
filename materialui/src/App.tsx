@@ -23,6 +23,7 @@ import { LessonDrawer } from './components/LessonDrawer';
 import { LessonBadge } from './components/LessonBadge';
 import { LessonSpeedDial } from './components/LessonSpeedDial';
 import { LessonBottomNavigation } from './components/LessonBottomNavigation';
+import { LessonAvatar } from './components/LessonAvatar';
 
 function App() {
   return (
@@ -49,7 +50,8 @@ function App() {
       {/* <LessonDrawer /> */}
       {/* <LessonBadge /> */}
       {/* <LessonSpeedDial /> */}
-      <LessonBottomNavigation />
+      {/* <LessonBottomNavigation /> */}
+      <LessonAvatar />
     </div>
   );
 }
