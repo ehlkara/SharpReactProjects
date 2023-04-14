@@ -17,6 +17,7 @@ import { LessonAccordion } from './components/LessonAccordion';
 import { LessonAppBar } from './components/LessonAppBar';
 import { LessonImageList } from './components/LessonImageList';
 import { LessonPaper } from './components/LessonPaper';
+import { LessonLink } from './components/LessonLink';
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
       {/* <LessonAccordion /> */}
       {/* <LessonAppBar /> */}
       {/* <LessonImageList /> */}
-      <LessonPaper />
+      {/* <LessonPaper /> */}
+      <LessonLink />
     </div>
   );
 }
