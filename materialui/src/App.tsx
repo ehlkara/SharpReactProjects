@@ -37,6 +37,7 @@ import { LessonDatePicker } from './components/LessonDatePicker';
 import { LessonDateRange } from './components/LessonDateRange';
 import { LessonTabs } from './components/LessonTabs';
 import { LessonMasonry } from './components/LessonMasonry';
+import { LessonTimeLine } from './components/LessonTimeLine';
 
 function App() {
   return (
@@ -77,7 +78,8 @@ function App() {
       {/* <LessonDatePicker /> */}
       {/* <LessonDateRange /> */}
       {/* <LessonTabs /> */}
-      <LessonMasonry />
+      {/* <LessonMasonry /> */}
+      <LessonTimeLine />
     </div>
   );
 }
