@@ -36,6 +36,7 @@ import { LessonTable } from './components/LessonTable';
 import { LessonDatePicker } from './components/LessonDatePicker';
 import { LessonDateRange } from './components/LessonDateRange';
 import { LessonTabs } from './components/LessonTabs';
+import { LessonMasonry } from './components/LessonMasonry';
 
 function App() {
   return (
@@ -75,7 +76,8 @@ function App() {
       {/* <LessonTable /> */}
       {/* <LessonDatePicker /> */}
       {/* <LessonDateRange /> */}
-      <LessonTabs />
+      {/* <LessonTabs /> */}
+      <LessonMasonry />
     </div>
   );
 }
