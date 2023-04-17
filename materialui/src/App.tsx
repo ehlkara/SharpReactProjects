@@ -35,6 +35,7 @@ import { LessonLoadingButton } from './components/LessonLoadingButton';
 import { LessonTable } from './components/LessonTable';
 import { LessonDatePicker } from './components/LessonDatePicker';
 import { LessonDateRange } from './components/LessonDateRange';
+import { LessonTabs } from './components/LessonTabs';
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
       {/* <LessonTable /> */}
       {/* <LessonDatePicker /> */}
       {/* <LessonDateRange /> */}
+      <LessonTabs />
     </div>
   );
 }
