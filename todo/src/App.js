@@ -3,6 +3,7 @@ import "./App.css";
 import CreateTask from "./CreateTask";
 import Task from "./Task";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -39,6 +40,7 @@ function App() {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
