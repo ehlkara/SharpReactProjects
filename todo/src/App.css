@@ -22,10 +22,10 @@ header {
 
 .todoDiv {
   width: 250px;
-    border: 1px solid lightblue;
-    border-radius: 30px;
-    margin-top: 20px;
-    padding: 20px;
+  border: 1px solid lightblue;
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .todoText {
@@ -34,4 +34,12 @@ header {
 
 .todoButton {
   width: 100px;
+}
+
+.contentDiv {
+  border: 1px solid lightblue;
+  border-radius: 30px;
+  min-width: 250px;
+  text-align: center;
+  padding: 20px;
 }
