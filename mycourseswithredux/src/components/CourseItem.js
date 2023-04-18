@@ -3,22 +3,22 @@ import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 
 export default function CourseItem({ id, title, price, img, quantity }) {
   return (
-    <div>
+    <div className="cartItem">
       <img src={img} alt="" />
-      <div>
+      <div className="cartInfo">
         <h4>{title}</h4>
         <h4>{price} TL</h4>
         <div>
-          <button>
+          <button className="cartQuantityButton">
             <BsChevronUp />
           </button>
-          <p>{quantity}</p>
-          <button>
+          <p className="cartQuantity">{quantity}</p>
+          <button className="cartQuantityButton">
             <BsChevronDown />
           </button>
         </div>
+        <button className="cartDeleteButton">Delete</button>
       </div>
-      <button>Delete</button>
     </div>
   );
 }

@@ -7,21 +7,21 @@ export default function CourseList() {
   return (
     <>
       {quantity < 1 ? (
-        <section>
+        <section className="cart">
           <header>
             <h2>My Shopping Cart</h2>
             <h4>Shopping cart is empty.</h4>
           </header>
         </section>
       ) : (
-        <section>
+        <section className="cart">
           <header>
             <h2>My Shopping Cart</h2>
           </header>
           <div>
             {
                 cartItems.map((item) => {
-                    return <CourseItem {...item}/>
+                    return <CourseItem key={item.id} {...item}/>
                 })
             }
           </div>
@@ -30,7 +30,7 @@ export default function CourseList() {
             <div>
                 <h4>Total Price <span>{total} TL</span></h4>
             </div>
-            <button>Delete</button>
+            <button className="cartClearButton">Delete</button>
           </footer>
         </section>
       )}
