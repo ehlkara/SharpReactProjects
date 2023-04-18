@@ -1,8 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CourseItem from "./CourseItem";
+import { clearCart } from "../control/cartSlice";
 
 export default function CourseList() {
+  const dispatch = useDispatch();
   const { cartItems, quantity, total } = useSelector((store) => store.cart);
   return (
     <>
@@ -19,18 +21,23 @@ export default function CourseList() {
             <h2>My Shopping Cart</h2>
           </header>
           <div>
-            {
-                cartItems.map((item) => {
-                    return <CourseItem key={item.id} {...item}/>
-                })
-            }
+            {cartItems.map((item) => {
+              return <CourseItem key={item.id} {...item} />;
+            })}
           </div>
           <footer>
             <hr />
             <div>
-                <h4>Total Price <span>{total} TL</span></h4>
+              <h4>
+                Total Price <span>{total} TL</span>
+              </h4>
             </div>
-            <button className="cartClearButton">Delete</button>
+            <button
+              className="cartClearButton"
+              onClick={() => dispatch(clearCart())}
+            >
+              Delete
+            </button>
           </footer>
         </section>
       )}
