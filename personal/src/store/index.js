@@ -1,6 +1,6 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { setupListeners } from "@reduxjs/toolkit/dist/query";
-import { usersApi } from "./apis/usersApi";
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/dist/query';
+import { usersApi } from './apis/usersApi';
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +15,6 @@ setupListeners(store.dispatch);
 
 export {
   useFetchUsersQuery,
-  useAddUsersMutation,
-  useRemoveUsersMutation,
-} from "./apis/usersApi";
+  useAddUserMutation,
+  useRemoveUserMutation,
+} from './apis/usersApi';

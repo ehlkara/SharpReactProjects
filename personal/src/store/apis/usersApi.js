@@ -1,9 +1,19 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const pause = (duration) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, duration);
+  });
+};
+
 const usersApi = createApi({
   reducerPath: "users",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3000",
+    fetchFn: async (...args) => {
+      await pause(1000);
+      return fetch(...args);
+    },
   }),
   endpoints(builder) {
     return {
@@ -15,18 +25,18 @@ const usersApi = createApi({
           };
         },
       }),
-      addUsers: builder.mutation({
+      addUser: builder.mutation({
         query: () => {
           return {
             url: "/users",
             method: "POST",
             body: {
-              name: "Ehlkara",
+              name: "Can",
             },
           };
         },
       }),
-      removeUsers: builder.mutation({
+      removeUser: builder.mutation({
         query: (user) => {
           return {
             url: `/users/${user.id}`,
@@ -38,9 +48,6 @@ const usersApi = createApi({
   },
 });
 
-export const {
-  useFetchUsersQuery,
-  useAddUsersMutation,
-  useRemoveUsersMutation,
-} = usersApi;
+export const { useFetchUsersQuery, useAddUserMutation, useRemoveUserMutation } =
+  usersApi;
 export { usersApi };
