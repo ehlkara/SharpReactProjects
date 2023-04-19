@@ -1,7 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  changeName,
+  changeDescription,
+  changeCost,
+} from "../store/slices/formSlice";
 
 export default function CourseForm() {
+  const dispatch = useDispatch();
   const { name, description, cost } = useSelector((state) => {
     return {
       name: state.form.name,
@@ -18,15 +24,34 @@ export default function CourseForm() {
         <div className="field-group">
           <div className="field">
             <label className="label">Name</label>
-            <input className="input is-expanded" />
+            <input
+              className="input is-expanded"
+              onChange={(event) => {
+                dispatch(changeName(event.target.value));
+              }}
+              value={name}
+            />
           </div>
           <div className="field">
             <label className="label">Description</label>
-            <textarea className="input is-expanded" />
+            <textarea
+              className="input is-expanded"
+              onChange={(event) => {
+                dispatch(changeDescription(event.target.value));
+              }}
+              value={description}
+            />
           </div>
           <div className="field">
             <label className="label">Price</label>
-            <input className="input is-expanded" type="number" />
+            <input
+              className="input is-expanded"
+              type="number"
+              onChange={(event) => {
+                dispatch(changeCost(parseInt(event.target.value)));
+              }}
+              value={cost}
+            />
           </div>
         </div>
         <div className="field">
