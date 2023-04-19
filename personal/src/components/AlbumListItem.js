@@ -1,7 +1,38 @@
-import React from 'react'
+import React from "react";
+import ExpandablePanel from "./ExpandablePanel";
+import PhotoList from "./PhotoList";
+import { GoTrashcan } from "react-icons/go";
+import { useRemoveAlbumMutation } from "../store";
+import CircularProgress from "@mui/material/CircularProgress";
 
-export default function AlbumListItem({album}) {
+export default function AlbumListItem({ album }) {
+  const [removeAlbum, results] = useRemoveAlbumMutation();
+
+  const handleClick = () => {
+    removeAlbum(album);
+  };
+
+  const header = (
+    <>
+      <button
+        style={{ marginRight: "30px", border: "none", cursor: "pointer" }}
+        onClick={handleClick}
+      >
+        {results.isLoading ? (
+          <CircularProgress style={{ width: "20px", height: "20px" }} />
+        ) : (
+          <GoTrashcan />
+        )}
+      </button>
+      {album.title}
+    </>
+  );
+
   return (
-    <div>{album.title}</div>
-  )
+    <div>
+      <ExpandablePanel header={header}>
+        <PhotoList album={album} />
+      </ExpandablePanel>
+    </div>
+  );
 }
