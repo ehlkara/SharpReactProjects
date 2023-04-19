@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const courseSlice = createSlice({
   name: "form",
@@ -7,7 +7,18 @@ const courseSlice = createSlice({
     data: [],
   },
 
-  reducers: {},
+  reducers: {
+    addCourse(state, action) {
+      state.data.push({
+        name: action.payload.name,
+        description: action.payload.description,
+        cost: action.payload.cost,
+        id: nanoid(),
+      });
+    },
+  },
 });
+
+export const { addCourse } = courseSlice.actions;
 
 export const courseReducer = courseSlice.reducer;

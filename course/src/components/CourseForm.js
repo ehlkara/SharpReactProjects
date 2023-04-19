@@ -5,6 +5,7 @@ import {
   changeDescription,
   changeCost,
 } from "../store/slices/formSlice";
+import { addCourse } from "../store/slices/courseSlice";
 
 export default function CourseForm() {
   const dispatch = useDispatch();
@@ -16,11 +17,15 @@ export default function CourseForm() {
     };
   });
 
-  console.log(name, description, cost);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(addCourse({ name, description, cost }));
+  };
+
   return (
     <div className="courseForm panel">
       <h4 className="subtitle is-3">Add Course</h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="field-group">
           <div className="field">
             <label className="label">Name</label>
