@@ -19,6 +19,23 @@
       "userId": 1,
       "title": "Modern Fresh Tuna",
       "id": 55
+    },
+    {
+      "userId": 1,
+      "title": "Refined Steel Bike",
+      "id": 56
+    },
+    {
+      "userId": 1,
+      "title": "Practical Fresh Tuna",
+      "id": 57
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 57,
+      "url": "https://loremflickr.com/150/150/abstract?lock=87706",
+      "id": 1
     }
   ]
 }
