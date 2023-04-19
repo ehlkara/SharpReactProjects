@@ -8,5 +8,12 @@
       "id": 2,
       "name": "Ehlullah Karakurt"
     }
+  ],
+  "albums": [
+    {
+      "userId": 2,
+      "title": "Sivas",
+      "id": 54
+    }
   ]
 }
