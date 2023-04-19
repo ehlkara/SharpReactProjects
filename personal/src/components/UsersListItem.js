@@ -1,7 +1,23 @@
-import React from 'react'
+import React from "react";
+import ExpandablePanel from "./ExpandablePanel";
+import AlbumList from "./AlbumList";
+import { GoTrashcan } from "react-icons/go";
 
-export default function UsersListItem({user}) {
+export default function UsersListItem({ user }) {
+  const header = (
+    <>
+      <button style={{ marginRight: "30px", border:'none' }}>
+        <GoTrashcan />
+      </button>
+      {user.name}
+    </>
+  );
+
   return (
-    <div>{user.name}</div>
-  )
+    <div>
+      <ExpandablePanel header={header}>
+        <AlbumList user={user} />
+      </ExpandablePanel>
+    </div>
+  );
 }
