@@ -1,5 +1,5 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { faker } from "@faker-js/faker";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { faker } from '@faker-js/faker';
 
 const pause = (duration) => {
   return new Promise((resolve) => {
@@ -8,9 +8,9 @@ const pause = (duration) => {
 };
 
 const photosApi = createApi({
-  reducerPath: "photos",
+  reducerPath: 'photos',
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000",
+    baseUrl: 'http://localhost:3000',
     fetchFn: async (...args) => {
       await pause(1000);
       return fetch(...args);
@@ -21,15 +21,15 @@ const photosApi = createApi({
       fetchPhotos: builder.query({
         providesTags: (result, error, album) => {
           const tags = result.map((photo) => {
-            return { type: "Photo", id: photo.id };
+            return { type: 'Photo', id: photo.id };
           });
-          tags.push({ type: "AlbumPhoto", id: album.id });
+          tags.push({ type: 'AlbumPhoto', id: album.id });
           return tags;
         },
         query: (album) => {
           return {
-            url: "/photos",
-            method: "GET",
+            url: '/photos',
+            method: 'GET',
             params: {
               albumId: album.id,
             },
@@ -38,12 +38,12 @@ const photosApi = createApi({
       }),
       addPhoto: builder.mutation({
         invalidatesTags: (result, error, album) => {
-          return [{ type: "AlbumPhoto", id: album.id }];
+          return [{ type: 'AlbumPhoto', id: album.id }];
         },
         query: (album) => {
           return {
-            url: "/photos",
-            method: "POST",
+            url: '/photos',
+            method: 'POST',
             body: {
               albumId: album.id,
               url: faker.image.abstract(150, 150, true),
@@ -53,12 +53,12 @@ const photosApi = createApi({
       }),
       removePhoto: builder.mutation({
         invalidatesTags: (result, error, photo) => {
-          return [{ type: "Photo", id: photo.id }];
+          return [{ type: 'Photo', id: photo.id }];
         },
         query: (photo) => {
           return {
-            url: `/albums/${photo.id}`,
-            method: "DELETE",
+            url: `/photos/${photo.id}`,
+            method: 'DELETE',
           };
         },
       }),

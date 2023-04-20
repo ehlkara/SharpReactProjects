@@ -35,7 +35,7 @@ export default function PhotoList({ album }) {
           </Button>
         </div>
       </div>
-      <div>{content}</div>
+      <div className="photoDiv">{content}</div>
     </>
   );
 }
