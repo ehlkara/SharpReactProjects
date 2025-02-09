@@ -1,4 +1,3 @@
-import React from 'react'
 import BurgerImage from '../assets/burger.jpg';
 
 export const Data = [
