@@ -1,6 +1,7 @@
 import React from "react";
 import BannerImage from "../assets/banner.png";
 import '../styles/Contact.css';
+import { Button } from "@mui/material";
 
 export default function Contact() {
   return (
@@ -30,6 +31,7 @@ export default function Contact() {
             name="message"
             placeholder="Please enter message..."
           ></textarea>
+          <button>SEND</button>
         </form>
       </div>
     </div>
