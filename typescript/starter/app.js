@@ -102,11 +102,15 @@
 // code = 'ABC';
 // code = true;
 // console.log(code);
-var someThing = "Hello";
-someThing = 23;
-someThing = true;
-someThing = { name: 'Ehlullah', age: 29 };
-someThing = ['Apple', 'Orange', 'Banana'];
-console.log(someThing);
-var arr = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
-console.log(arr);
+// let someThing : any = "Hello";
+// someThing = 23;
+// someThing = true;
+// someThing = {name: 'Ehlullah', age: 29};
+// someThing = ['Apple', 'Orange', 'Banana'];
+// console.log(someThing);
+// let arr: any[] = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
+// console.log(arr);
+function sayHello() {
+    console.log("Hello World");
+}
+sayHello();

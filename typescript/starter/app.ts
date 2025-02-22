@@ -136,12 +136,18 @@
 // code = true;
 // console.log(code);
 
-let someThing : any = "Hello";
-someThing = 23;
-someThing = true;
-someThing = {name: 'Ehlullah', age: 29};
-someThing = ['Apple', 'Orange', 'Banana'];
-console.log(someThing);
+// let someThing : any = "Hello";
+// someThing = 23;
+// someThing = true;
+// someThing = {name: 'Ehlullah', age: 29};
+// someThing = ['Apple', 'Orange', 'Banana'];
+// console.log(someThing);
 
-let arr: any[] = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
-console.log(arr);
+// let arr: any[] = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
+// console.log(arr);
+
+function sayHello(): void {
+  console.log("Hello World");
+}
+
+sayHello();
