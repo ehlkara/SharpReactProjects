@@ -110,7 +110,13 @@
 // console.log(someThing);
 // let arr: any[] = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
 // console.log(arr);
-function sayHello() {
-    console.log("Hello World");
+// function sayHello(): void {
+//   console.log("Hello World");
+// }
+// sayHello();
+function throwError(errorMsg) {
+    throw new Error(errorMsg);
 }
-sayHello();
+throwError('This is an error');
+var someThing = undefined;
+var nothing;

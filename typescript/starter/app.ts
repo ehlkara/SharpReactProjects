@@ -146,8 +146,17 @@
 // let arr: any[] = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
 // console.log(arr);
 
-function sayHello(): void {
-  console.log("Hello World");
+// function sayHello(): void {
+//   console.log("Hello World");
+// }
+
+// sayHello();
+
+function throwError(errorMsg: string): never {
+  throw new Error(errorMsg);
 }
 
-sayHello();
+throwError('This is an error');
+
+let someThing: void = undefined;
+let nothing: never;
