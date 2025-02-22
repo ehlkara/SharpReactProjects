@@ -1,3 +1,10 @@
-console.log('Hello TypeScript!');
-console.log('Ehlullah Karakurt');
-console.log('Hello My Course!');
+let age: number = 29;
+let firstname: string = 'Ehlullah';
+let lastname: string = 'Karakurt';
+let isUpdated: boolean = true;
+
+function display(id: number, name: string) {
+    console.log('ID:', id, 'Name:', name);
+}
+
+display(age, `${firstname} ${lastname}`);
