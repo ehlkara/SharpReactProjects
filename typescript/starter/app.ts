@@ -152,11 +152,37 @@
 
 // sayHello();
 
-function throwError(errorMsg: string): never {
-  throw new Error(errorMsg);
+// function throwError(errorMsg: string): never {
+//   throw new Error(errorMsg);
+// }
+
+// throwError('This is an error');
+
+// let someThing: void = undefined;
+// let nothing: never;
+
+let count = 0;
+
+console.log(typeof count);
+
+// function increment(counter: number) {
+//     count++;
+// }
+
+function increment(counter: number): number {
+  return count++;
 }
 
-throwError('This is an error');
+increment(count);
+console.log(count);
 
-let someThing: void = undefined;
-let nothing: never;
+// let a = "some text";
+// let b = 123;
+// a = b;
+
+function sum(a: number, b: number): number {
+  return a + b;
+}
+
+let result: number = sum(10, 20);
+console.log(result);

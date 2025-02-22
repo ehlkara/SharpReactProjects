@@ -114,9 +114,27 @@
 //   console.log("Hello World");
 // }
 // sayHello();
-function throwError(errorMsg) {
-    throw new Error(errorMsg);
+// function throwError(errorMsg: string): never {
+//   throw new Error(errorMsg);
+// }
+// throwError('This is an error');
+// let someThing: void = undefined;
+// let nothing: never;
+var count = 0;
+console.log(typeof count);
+// function increment(counter: number) {
+//     count++;
+// }
+function increment(counter) {
+    return count++;
 }
-throwError('This is an error');
-var someThing = undefined;
-var nothing;
+increment(count);
+console.log(count);
+// let a = "some text";
+// let b = 123;
+// a = b;
+function sum(a, b) {
+    return a + b;
+}
+var result = sum(10, 20);
+console.log(result);
