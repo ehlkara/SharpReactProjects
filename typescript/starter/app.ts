@@ -23,5 +23,28 @@
 // console.log(employeeDesc);
 // console.log(employeeDesc2);
 
-let isPresent: boolean = false;
-console.log(isPresent);
+// let isPresent: boolean = false;
+// console.log(isPresent);
+
+
+let firstNames: string[] = ['Ehlullah', 'Merve'];
+let lastNames: Array<string> = ['Karakurt', 'Karakurt'];
+
+console.log(firstNames);
+console.log(lastNames);
+
+let arr = [1,3,'Apple', 'Orange', 'Banana', true, false];
+
+let ids: Array<number>;
+ids = [23, 34, 100, 124, 44];
+
+let values: (string | number)[] = ['Apple', 2, 'Orange', 3, 4, 'Banana'];
+
+let fruits: Array<string>;
+fruits = ['Apple', 'Orange', 'Banana'];
+
+// console.log(fruits[1]);
+
+for(let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}

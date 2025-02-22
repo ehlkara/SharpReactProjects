@@ -16,5 +16,19 @@
 // let employeeDesc2 = `${employeeName} works in the ${employeeDept} department.`;
 // console.log(employeeDesc);
 // console.log(employeeDesc2);
-var isPresent = false;
-console.log(isPresent);
+// let isPresent: boolean = false;
+// console.log(isPresent);
+var firstNames = ['Ehlullah', 'Merve'];
+var lastNames = ['Karakurt', 'Karakurt'];
+console.log(firstNames);
+console.log(lastNames);
+var arr = [1, 3, 'Apple', 'Orange', 'Banana', true, false];
+var ids;
+ids = [23, 34, 100, 124, 44];
+var values = ['Apple', 2, 'Orange', 3, 4, 'Banana'];
+var fruits;
+fruits = ['Apple', 'Orange', 'Banana'];
+// console.log(fruits[1]);
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
