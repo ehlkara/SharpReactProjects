@@ -109,22 +109,39 @@
 // console.log(employee.firstName);
 // console.log(person);
 
-enum Media {
-  Newspaper,
-  Newsletter,
-  Magazine,
-  Book,
-}
+// enum Media {
+//   Newspaper,
+//   Newsletter,
+//   Magazine,
+//   Book,
+// }
 
-console.log(Media.Magazine); // 2
-console.log(Media[3]); // Book
+// console.log(Media.Magazine); // 2
+// console.log(Media[3]); // Book
 
-enum PrintMedia {
-  Newspaper = "NEWSPAPER",
-  Newsletter = "NEWSLETTER",
-  Magazine = "MAGAZINE",
-  Book = "BOOK",
-}
+// enum PrintMedia {
+//   Newspaper = "NEWSPAPER",
+//   Newsletter = "NEWSLETTER",
+//   Magazine = "MAGAZINE",
+//   Book = "BOOK",
+// }
 
-console.log(PrintMedia.Magazine);
-console.log(PrintMedia['Newsletter']);
+// console.log(PrintMedia.Magazine);
+// console.log(PrintMedia['Newsletter']);
+
+// let code : string | Number | boolean;
+
+// code = 123;
+// code = 'ABC';
+// code = true;
+// console.log(code);
+
+let someThing : any = "Hello";
+someThing = 23;
+someThing = true;
+someThing = {name: 'Ehlullah', age: 29};
+someThing = ['Apple', 'Orange', 'Banana'];
+console.log(someThing);
+
+let arr: any[] = ['Apple', 2, 'Orange', 3, 4, 'Banana', true, false];
+console.log(arr);
