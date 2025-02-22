@@ -202,15 +202,44 @@
 // employee.name = "Ehlullah";
 // console.log(employee);
 
-let x: number = 20;
-let y: number = 20;
+// let x: number = 20;
+// let y: number = 20;
 
-// if (x > y) {
-//   console.log("x is greater than y");
-// } else if (x < y) {
-//   console.log("y is greater than x");
-// } else {
-//   console.log("x is equal to y");
-// }
+// // if (x > y) {
+// //   console.log("x is greater than y");
+// // } else if (x < y) {
+// //   console.log("y is greater than x");
+// // } else {
+// //   console.log("x is equal to y");
+// // }
 
-x > y ? console.log("x is greater than y") : console.log("y is greater than x or x is equal to y");
+// x > y ? console.log("x is greater than y") : console.log("y is greater than x or x is equal to y");
+
+let day: number = 25;
+
+switch (day) {
+  case 0:
+    console.log("Monday");
+    break;
+  case 1:
+    console.log("Tuesday");
+    break;
+  case 2:
+    console.log("Wednesday");
+    break;
+  case 3:
+    console.log("Thursday");
+    break;
+  case 4:
+    console.log("Friday");
+    break;
+  case 5:
+    console.log("Saturday");
+    break;
+  case 6:
+    console.log("Sunday");
+    break;
+  default:
+    console.log("There is no such day.");
+    break;
+}
