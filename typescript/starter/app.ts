@@ -66,45 +66,65 @@
 
 // console.log(employee2);
 
-type Person = {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  jobTitle: string;
-  isActive: boolean;
-};
+// type Person = {
+//   id: number;
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   jobTitle: string;
+//   isActive: boolean;
+// };
 
-// let employee: object;
-let employee: Person;
+// // let employee: object;
+// let employee: Person;
 
-employee = {
-  id: 1,
-  firstName: "Ehlullah",
-  lastName: "Karakurt",
-  age: 29,
-  jobTitle: "Software Developer",
-  isActive: true,
-};
+// employee = {
+//   id: 1,
+//   firstName: "Ehlullah",
+//   lastName: "Karakurt",
+//   age: 29,
+//   jobTitle: "Software Developer",
+//   isActive: true,
+// };
 
-let person: {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  jobTitle: string;
-  isActive: boolean;
-};
+// let person: {
+//   id: number;
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   jobTitle: string;
+//   isActive: boolean;
+// };
 
-person = {
-  id: 1,
-  firstName: "Ehlullah",
-  lastName: "Karakurt",
-  age: 29,
-  jobTitle: "Software Developer",
-  isActive: true,
-};
+// person = {
+//   id: 1,
+//   firstName: "Ehlullah",
+//   lastName: "Karakurt",
+//   age: 29,
+//   jobTitle: "Software Developer",
+//   isActive: true,
+// };
 
-console.log(employee);
-console.log(employee.firstName);
-console.log(person);
+// console.log(employee);
+// console.log(employee.firstName);
+// console.log(person);
+
+enum Media {
+  Newspaper,
+  Newsletter,
+  Magazine,
+  Book,
+}
+
+console.log(Media.Magazine); // 2
+console.log(Media[3]); // Book
+
+enum PrintMedia {
+  Newspaper = "NEWSPAPER",
+  Newsletter = "NEWSLETTER",
+  Magazine = "MAGAZINE",
+  Book = "BOOK",
+}
+
+console.log(PrintMedia.Magazine);
+console.log(PrintMedia['Newsletter']);
