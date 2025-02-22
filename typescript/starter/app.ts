@@ -26,25 +26,42 @@
 // let isPresent: boolean = false;
 // console.log(isPresent);
 
+// let firstNames: string[] = ['Ehlullah', 'Merve'];
+// let lastNames: Array<string> = ['Karakurt', 'Karakurt'];
 
-let firstNames: string[] = ['Ehlullah', 'Merve'];
-let lastNames: Array<string> = ['Karakurt', 'Karakurt'];
+// console.log(firstNames);
+// console.log(lastNames);
 
-console.log(firstNames);
-console.log(lastNames);
+// let arr = [1,3,'Apple', 'Orange', 'Banana', true, false];
 
-let arr = [1,3,'Apple', 'Orange', 'Banana', true, false];
+// let ids: Array<number>;
+// ids = [23, 34, 100, 124, 44];
 
-let ids: Array<number>;
-ids = [23, 34, 100, 124, 44];
+// let values: (string | number)[] = ['Apple', 2, 'Orange', 3, 4, 'Banana'];
 
-let values: (string | number)[] = ['Apple', 2, 'Orange', 3, 4, 'Banana'];
+// let fruits: Array<string>;
+// fruits = ['Apple', 'Orange', 'Banana'];
 
-let fruits: Array<string>;
-fruits = ['Apple', 'Orange', 'Banana'];
+// // console.log(fruits[1]);
 
-// console.log(fruits[1]);
+// for(let i = 0; i < fruits.length; i++){
+//     console.log(fruits[i]);
+// }
 
-for(let i = 0; i < fruits.length; i++){
-    console.log(fruits[i]);
-}
+let Id: number = 1;
+let firstName: string = "Ehlullah";
+
+let employee: [number, string] = [1, 'Ehlullah'];
+
+let user: [number, string, boolean, number, string];
+user = [1, 'Ehlullah', true, 100, 'Admin'];
+
+console.log(employee, user);
+
+let employee2: [number, string][] = [
+    [1, 'Ehlullah'],
+    [2, 'Merve'],
+    [3, 'Karakurt']
+];
+
+console.log(employee2);
