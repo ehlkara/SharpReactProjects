@@ -161,28 +161,43 @@
 // let someThing: void = undefined;
 // let nothing: never;
 
-let count = 0;
+// let count = 0;
 
-console.log(typeof count);
+// console.log(typeof count);
 
-// function increment(counter: number) {
-//     count++;
+// // function increment(counter: number) {
+// //     count++;
+// // }
+
+// function increment(counter: number): number {
+//   return count++;
 // }
 
-function increment(counter: number): number {
-  return count++;
+// increment(count);
+// console.log(count);
+
+// // let a = "some text";
+// // let b = 123;
+// // a = b;
+
+// function sum(a: number, b: number): number {
+//   return a + b;
+// }
+
+// let result: number = sum(10, 20);
+// console.log(result);
+
+// let code: any = 123;
+
+// let empCode = <number>code;
+// console.log(typeof (code));
+
+interface Employee {
+  name: string;
+  code: number;
 }
 
-increment(count);
-console.log(count);
-
-// let a = "some text";
-// let b = 123;
-// a = b;
-
-function sum(a: number, b: number): number {
-  return a + b;
-}
-
-let result: number = sum(10, 20);
-console.log(result);
+let employee = <Employee>{};
+console.log(typeof employee);
+employee.name = "Ehlullah";
+console.log(employee);
