@@ -48,20 +48,63 @@
 //     console.log(fruits[i]);
 // }
 
-let Id: number = 1;
-let firstName: string = "Ehlullah";
+// let Id: number = 1;
+// let firstName: string = "Ehlullah";
 
-let employee: [number, string] = [1, 'Ehlullah'];
+// let employee: [number, string] = [1, 'Ehlullah'];
 
-let user: [number, string, boolean, number, string];
-user = [1, 'Ehlullah', true, 100, 'Admin'];
+// let user: [number, string, boolean, number, string];
+// user = [1, 'Ehlullah', true, 100, 'Admin'];
 
-console.log(employee, user);
+// console.log(employee, user);
 
-let employee2: [number, string][] = [
-    [1, 'Ehlullah'],
-    [2, 'Merve'],
-    [3, 'Karakurt']
-];
+// let employee2: [number, string][] = [
+//     [1, 'Ehlullah'],
+//     [2, 'Merve'],
+//     [3, 'Karakurt']
+// ];
 
-console.log(employee2);
+// console.log(employee2);
+
+type Person = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
+  isActive: boolean;
+};
+
+// let employee: object;
+let employee: Person;
+
+employee = {
+  id: 1,
+  firstName: "Ehlullah",
+  lastName: "Karakurt",
+  age: 29,
+  jobTitle: "Software Developer",
+  isActive: true,
+};
+
+let person: {
+  id: number;
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
+  isActive: boolean;
+};
+
+person = {
+  id: 1,
+  firstName: "Ehlullah",
+  lastName: "Karakurt",
+  age: 29,
+  jobTitle: "Software Developer",
+  isActive: true,
+};
+
+console.log(employee);
+console.log(employee.firstName);
+console.log(person);
