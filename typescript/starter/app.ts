@@ -192,12 +192,25 @@
 // let empCode = <number>code;
 // console.log(typeof (code));
 
-interface Employee {
-  name: string;
-  code: number;
-}
+// interface Employee {
+//   name: string;
+//   code: number;
+// }
 
-let employee = <Employee>{};
-console.log(typeof employee);
-employee.name = "Ehlullah";
-console.log(employee);
+// let employee = <Employee>{};
+// console.log(typeof employee);
+// employee.name = "Ehlullah";
+// console.log(employee);
+
+let x: number = 20;
+let y: number = 20;
+
+// if (x > y) {
+//   console.log("x is greater than y");
+// } else if (x < y) {
+//   console.log("y is greater than x");
+// } else {
+//   console.log("x is equal to y");
+// }
+
+x > y ? console.log("x is greater than y") : console.log("y is greater than x or x is equal to y");
