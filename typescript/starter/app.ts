@@ -328,13 +328,33 @@
 
 // write();
 
-function add(a: number, b: number): number;
-function add(a: string, b: string): string;
+// function add(a: number, b: number): number;
+// function add(a: string, b: string): string;
 
-function add(a: any, b: any): any {
-  return a + b;
+// function add(a: any, b: any): any {
+//   return a + b;
+// }
+
+// // let sum = add("Hello", " World");
+// let sum = add(4, 5);
+// console.log(sum);
+
+function sum(a: string, ...numbers: number[]): number {
+  console.log(a);
+  let result = 0;
+  numbers.forEach((num) => {
+    result += num;
+  });
+  return result;
 }
 
-// let sum = add("Hello", " World");
-let sum = add(4, 5);
-console.log(sum);
+let result = sum('Ehlullah', 2, 3, 4, 5);
+console.log(result);
+
+
+function combine(message: string, ...names: string[]): string {
+  return message + ' ' + names.join(', ');
+}
+
+let combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
+console.log(combined);
