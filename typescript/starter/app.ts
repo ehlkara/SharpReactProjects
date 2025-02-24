@@ -298,32 +298,43 @@
 // let fullName = combine('Ehlullah', 'Kara');
 // console.log(fullName);
 
-function multiply(a: number, b: number, c?: number): number {
-  console.log(typeof c);
-  if (typeof c !== "undefined") {
-    return a * b * c;
-  }
-  return a * b;
-}
+// function multiply(a: number, b: number, c?: number): number {
+//   console.log(typeof c);
+//   if (typeof c !== "undefined") {
+//     return a * b * c;
+//   }
+//   return a * b;
+// }
 
-let result = multiply(2, 3);
-console.log(result);
+// let result = multiply(2, 3);
+// console.log(result);
 
 // function multiply2(a: number, b: number): number {
 //   return a * b;
 // }
 
-let multiply2 = (a: number, b: number): number => {
-  return a * b;
-}; // arrow function
+// let multiply2 = (a: number, b: number): number => {
+//   return a * b;
+// }; // arrow function
 
-let result2 = multiply2(2, 3);
-console.log(result2);
+// let result2 = multiply2(2, 3);
+// console.log(result2);
 
-let write = (): void => {
-  console.log("Hello World");
-};
+// let write = (): void => {
+//   console.log("Hello World");
+// };
 
-// let write = (): void => console.log("Hello World");
+// // let write = (): void => console.log("Hello World");
 
-write();
+// write();
+
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+
+function add(a: any, b: any): any {
+  return a + b;
+}
+
+// let sum = add("Hello", " World");
+let sum = add(4, 5);
+console.log(sum);
