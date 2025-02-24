@@ -271,16 +271,17 @@
 // let combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
 // console.log(combined);
 var Person = /** @class */ (function () {
-    function Person(id, firstName, lastName) {
+    function Person(id, firstName, lastName, age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
     }
     Person.prototype.getFullName = function () {
         return this.firstName + ' ' + this.lastName;
     };
     return Person;
 }());
-var personInfo = new Person(29, 'Ehlullah', 'Karakurt');
+var personInfo = new Person(29, 'Ehlullah', 'Karakurt', 29);
 console.log(personInfo);
 console.log(personInfo.getFullName());

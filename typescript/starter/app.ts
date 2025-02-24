@@ -360,14 +360,16 @@
 // console.log(combined);
 
 class Person {
-  id: number;
-  firstName: string;
-  lastName: string;
+  public id: number;
+  private firstName: string;
+  private lastName: string;
+  protected age: number;
 
-  constructor(id: number, firstName: string, lastName: string) {
+  constructor(id: number, firstName: string, lastName: string, age: number) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
+    this.age = age;
   }
 
   getFullName(): string {
@@ -375,7 +377,7 @@ class Person {
   }
 }
 
-let personInfo = new Person(29, 'Ehlullah', 'Karakurt');
+let personInfo = new Person(29, 'Ehlullah', 'Karakurt', 29);
 
 console.log(personInfo);
 
