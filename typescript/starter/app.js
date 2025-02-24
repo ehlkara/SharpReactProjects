@@ -283,5 +283,6 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var personInfo = new Person(29, 'Ehlullah', 'Karakurt', 29);
-console.log(personInfo);
+personInfo.id = 2;
+console.log(personInfo.id);
 console.log(personInfo.getFullName());

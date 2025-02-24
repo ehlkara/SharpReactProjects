@@ -360,7 +360,7 @@
 // console.log(combined);
 
 class Person {
-  public id: number;
+  readonly id: number;
   private firstName: string;
   private lastName: string;
   protected age: number;
@@ -378,7 +378,7 @@ class Person {
 }
 
 let personInfo = new Person(29, 'Ehlullah', 'Karakurt', 29);
-
-console.log(personInfo);
+personInfo.id = 2;
+console.log(personInfo.id);
 
 console.log(personInfo.getFullName());
