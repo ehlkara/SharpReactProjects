@@ -159,30 +159,42 @@
 // //   console.log("x is equal to y");
 // // }
 // x > y ? console.log("x is greater than y") : console.log("y is greater than x or x is equal to y");
-var day = 25;
-switch (day) {
-    case 0:
-        console.log("Monday");
-        break;
-    case 1:
-        console.log("Tuesday");
-        break;
-    case 2:
-        console.log("Wednesday");
-        break;
-    case 3:
-        console.log("Thursday");
-        break;
-    case 4:
-        console.log("Friday");
-        break;
-    case 5:
-        console.log("Saturday");
-        break;
-    case 6:
-        console.log("Sunday");
-        break;
-    default:
-        console.log("There is no such day.");
-        break;
+// let day: number = 25;
+// switch (day) {
+//   case 0:
+//     console.log("Monday");
+//     break;
+//   case 1:
+//     console.log("Tuesday");
+//     break;
+//   case 2:
+//     console.log("Wednesday");
+//     break;
+//   case 3:
+//     console.log("Thursday");
+//     break;
+//   case 4:
+//     console.log("Friday");
+//     break;
+//   case 5:
+//     console.log("Saturday");
+//     break;
+//   case 6:
+//     console.log("Sunday");
+//     break;
+//   default:
+//     console.log("There is no such day.");
+//     break;
+// }
+for (var i = 0; i < 3; i++) {
+    console.log(i);
+}
+var arr = [10, 20, 30, 40, 50];
+for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
+    var item = arr_1[_i];
+    console.log(item);
+}
+var str = 'Hello World';
+for (var char in arr) {
+    console.log(char);
 }
