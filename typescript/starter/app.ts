@@ -244,18 +244,34 @@
 //     break;
 // }
 
-for(let i = 0; i < 3; i++){
-    console.log(i);
+// for(let i = 0; i < 3; i++){
+//     console.log(i);
+// }
+
+// let arr = [10, 20, 30, 40, 50];
+
+// for(let item of arr){
+//     console.log(item);
+// }
+
+// let str = 'Hello World';
+
+// for(let char in arr){
+//     console.log(char);
+// }
+
+let counter = 10;
+
+while (counter < 5) {
+  console.log(counter);
+  counter++;
+
+  if (counter == 3) {
+    break;
+  }
 }
 
-let arr = [10, 20, 30, 40, 50];
-
-for(let item of arr){
-    console.log(item);
-}
-
-let str = 'Hello World';
-
-for(let char in arr){
-    console.log(char);
-}
+do {
+  console.log(counter);
+  counter++;
+} while (counter < 5);

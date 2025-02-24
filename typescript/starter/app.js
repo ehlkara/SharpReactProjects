@@ -186,15 +186,26 @@
 //     console.log("There is no such day.");
 //     break;
 // }
-for (var i = 0; i < 3; i++) {
-    console.log(i);
+// for(let i = 0; i < 3; i++){
+//     console.log(i);
+// }
+// let arr = [10, 20, 30, 40, 50];
+// for(let item of arr){
+//     console.log(item);
+// }
+// let str = 'Hello World';
+// for(let char in arr){
+//     console.log(char);
+// }
+var counter = 10;
+while (counter < 5) {
+    console.log(counter);
+    counter++;
+    if (counter == 3) {
+        break;
+    }
 }
-var arr = [10, 20, 30, 40, 50];
-for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-    var item = arr_1[_i];
-    console.log(item);
-}
-var str = 'Hello World';
-for (var char in arr) {
-    console.log(char);
-}
+do {
+    console.log(counter);
+    counter++;
+} while (counter < 5);
