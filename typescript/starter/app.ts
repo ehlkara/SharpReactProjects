@@ -276,24 +276,54 @@
 //   counter++;
 // } while (counter < 5);
 
-function add(a: number, b: number): number {
-  return a + b;
+// function add(a: number, b: number): number {
+//   return a + b;
+// }
+
+// let sum = add(10, 20);
+// console.log(sum);
+
+// function write() {
+//   console.log("Hello World");
+//   return 35;
+// }
+
+// let parameter = write();
+// console.log(parameter);
+
+// function combine(name: string, surname: string = 'Karakurt'): string {
+//   return name + ' ' + surname;
+// }
+
+// let fullName = combine('Ehlullah', 'Kara');
+// console.log(fullName);
+
+function multiply(a: number, b: number, c?: number): number {
+  console.log(typeof c);
+  if (typeof c !== "undefined") {
+    return a * b * c;
+  }
+  return a * b;
 }
 
-let sum = add(10, 20);
-console.log(sum);
+let result = multiply(2, 3);
+console.log(result);
 
-function write() {
+// function multiply2(a: number, b: number): number {
+//   return a * b;
+// }
+
+let multiply2 = (a: number, b: number): number => {
+  return a * b;
+}; // arrow function
+
+let result2 = multiply2(2, 3);
+console.log(result2);
+
+let write = (): void => {
   console.log("Hello World");
-  return 35;
-}
+};
 
-let parameter = write();
-console.log(parameter);
+// let write = (): void => console.log("Hello World");
 
-function combine(name: string, surname: string = 'Karakurt'): string {
-  return name + ' ' + surname;
-}
-
-let fullName = combine('Ehlullah', 'Karakurttttt');
-console.log(fullName);
+write();
