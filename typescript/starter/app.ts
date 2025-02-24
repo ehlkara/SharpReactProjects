@@ -339,22 +339,44 @@
 // let sum = add(4, 5);
 // console.log(sum);
 
-function sum(a: string, ...numbers: number[]): number {
-  console.log(a);
-  let result = 0;
-  numbers.forEach((num) => {
-    result += num;
-  });
-  return result;
+// function sum(a: string, ...numbers: number[]): number {
+//   console.log(a);
+//   let result = 0;
+//   numbers.forEach((num) => {
+//     result += num;
+//   });
+//   return result;
+// }
+
+// let result = sum('Ehlullah', 2, 3, 4, 5);
+// console.log(result);
+
+
+// function combine(message: string, ...names: string[]): string {
+//   return message + ' ' + names.join(', ');
+// }
+
+// let combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
+// console.log(combined);
+
+class Person {
+  id: number;
+  firstName: string;
+  lastName: string;
+
+  constructor(id: number, firstName: string, lastName: string) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  getFullName(): string {
+    return this.firstName + ' ' + this.lastName;
+  }
 }
 
-let result = sum('Ehlullah', 2, 3, 4, 5);
-console.log(result);
+let personInfo = new Person(29, 'Ehlullah', 'Karakurt');
 
+console.log(personInfo);
 
-function combine(message: string, ...names: string[]): string {
-  return message + ' ' + names.join(', ');
-}
-
-let combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
-console.log(combined);
+console.log(personInfo.getFullName());

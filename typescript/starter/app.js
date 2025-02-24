@@ -255,26 +255,32 @@
 // // let sum = add("Hello", " World");
 // let sum = add(4, 5);
 // console.log(sum);
-function sum(a) {
-    var numbers = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        numbers[_i - 1] = arguments[_i];
+// function sum(a: string, ...numbers: number[]): number {
+//   console.log(a);
+//   let result = 0;
+//   numbers.forEach((num) => {
+//     result += num;
+//   });
+//   return result;
+// }
+// let result = sum('Ehlullah', 2, 3, 4, 5);
+// console.log(result);
+// function combine(message: string, ...names: string[]): string {
+//   return message + ' ' + names.join(', ');
+// }
+// let combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
+// console.log(combined);
+var Person = /** @class */ (function () {
+    function Person(id, firstName, lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    console.log(a);
-    var result = 0;
-    numbers.forEach(function (num) {
-        result += num;
-    });
-    return result;
-}
-var result = sum('Ehlullah', 2, 3, 4, 5);
-console.log(result);
-function combine(message) {
-    var names = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        names[_i - 1] = arguments[_i];
-    }
-    return message + ' ' + names.join(', ');
-}
-var combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
-console.log(combined);
+    Person.prototype.getFullName = function () {
+        return this.firstName + ' ' + this.lastName;
+    };
+    return Person;
+}());
+var personInfo = new Person(29, 'Ehlullah', 'Karakurt');
+console.log(personInfo);
+console.log(personInfo.getFullName());
