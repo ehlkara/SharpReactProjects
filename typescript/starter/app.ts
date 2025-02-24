@@ -260,18 +260,40 @@
 //     console.log(char);
 // }
 
-let counter = 10;
+// let counter = 10;
 
-while (counter < 5) {
-  console.log(counter);
-  counter++;
+// while (counter < 5) {
+//   console.log(counter);
+//   counter++;
 
-  if (counter == 3) {
-    break;
-  }
+//   if (counter == 3) {
+//     break;
+//   }
+// }
+
+// do {
+//   console.log(counter);
+//   counter++;
+// } while (counter < 5);
+
+function add(a: number, b: number): number {
+  return a + b;
 }
 
-do {
-  console.log(counter);
-  counter++;
-} while (counter < 5);
+let sum = add(10, 20);
+console.log(sum);
+
+function write() {
+  console.log("Hello World");
+  return 35;
+}
+
+let parameter = write();
+console.log(parameter);
+
+function combine(name: string, surname: string = 'Karakurt'): string {
+  return name + ' ' + surname;
+}
+
+let fullName = combine('Ehlullah', 'Karakurttttt');
+console.log(fullName);

@@ -197,15 +197,32 @@
 // for(let char in arr){
 //     console.log(char);
 // }
-var counter = 10;
-while (counter < 5) {
-    console.log(counter);
-    counter++;
-    if (counter == 3) {
-        break;
-    }
+// let counter = 10;
+// while (counter < 5) {
+//   console.log(counter);
+//   counter++;
+//   if (counter == 3) {
+//     break;
+//   }
+// }
+// do {
+//   console.log(counter);
+//   counter++;
+// } while (counter < 5);
+function add(a, b) {
+    return a + b;
 }
-do {
-    console.log(counter);
-    counter++;
-} while (counter < 5);
+var sum = add(10, 20);
+console.log(sum);
+function write() {
+    console.log("Hello World");
+    return 35;
+}
+var parameter = write();
+console.log(parameter);
+function combine(name, surname) {
+    if (surname === void 0) { surname = 'Karakurt'; }
+    return name + ' ' + surname;
+}
+var fullName = combine('Ehlullah', 'Karakurttttt');
+console.log(fullName);
