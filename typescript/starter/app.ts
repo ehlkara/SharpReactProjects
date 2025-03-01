@@ -358,36 +358,57 @@
 // let combined = combine('Hello', 'Ehlullah', 'Merve', 'Karakurt');
 // console.log(combined);
 
-class Person {
-  readonly id: number;
-  private firstName: string;
-  private lastName: string;
-  protected age: number;
+// class Person {
+//   readonly id: number;
+//   private firstName: string;
+//   private lastName: string;
+//   protected age: number;
 
-  constructor(id: number, firstName: string, lastName: string, age: number) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
+//   constructor(id: number, firstName: string, lastName: string, age: number) {
+//     this.id = id;
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
 
-  getFullName(): string {
-    return this.firstName + " " + this.lastName;
-  }
-}
+//   getFullName(): string {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
 
-class Employee extends Person {
-  constructor(id: number, firstName: string, lastName: string, age: number) {
-    super(id, firstName, lastName, age);
-  }
-}
+// class Employee extends Person {
+//   constructor(id: number, firstName: string, lastName: string, age: number) {
+//     super(id, firstName, lastName, age);
+//   }
+// }
 
-let employee = new Employee(1, "Ehlullah", "Karakurt", 29);
-console.log(employee);
-console.log(employee.getFullName());
+// let employee = new Employee(1, "Ehlullah", "Karakurt", 29);
+// console.log(employee);
+// console.log(employee.getFullName());
 
 // let personInfo = new Person(29, "Ehlullah", "Karakurt", 29);
 // personInfo.id = 100;
 // console.log(personInfo.id);
 
 // console.log(personInfo.getFullName());
+
+class Circle {
+  static pi: number = 3.14;
+  pi = 3;
+
+  constructor() {
+    this.pi++;
+    Circle.pi++;
+  }
+
+  static calculateArea(radius: number): number {
+    return this.pi * radius * radius;
+  }
+}
+
+let circle = new Circle();
+let circle2 = new Circle();
+console.log(circle2.pi);
+
+console.log(Circle.pi);
+console.log(Circle.calculateArea(5));
