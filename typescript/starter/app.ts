@@ -351,7 +351,6 @@
 // let result = sum('Ehlullah', 2, 3, 4, 5);
 // console.log(result);
 
-
 // function combine(message: string, ...names: string[]): string {
 //   return message + ' ' + names.join(', ');
 // }
@@ -373,12 +372,22 @@ class Person {
   }
 
   getFullName(): string {
-    return this.firstName + ' ' + this.lastName;
+    return this.firstName + " " + this.lastName;
   }
 }
 
-let personInfo = new Person(29, 'Ehlullah', 'Karakurt', 29);
-personInfo.id = 2;
-console.log(personInfo.id);
+class Employee extends Person {
+  constructor(id: number, firstName: string, lastName: string, age: number) {
+    super(id, firstName, lastName, age);
+  }
+}
 
-console.log(personInfo.getFullName());
+let employee = new Employee(1, "Ehlullah", "Karakurt", 29);
+console.log(employee);
+console.log(employee.getFullName());
+
+// let personInfo = new Person(29, "Ehlullah", "Karakurt", 29);
+// personInfo.id = 100;
+// console.log(personInfo.id);
+
+// console.log(personInfo.getFullName());

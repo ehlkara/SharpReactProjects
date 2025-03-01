@@ -2,6 +2,21 @@
 // let second: number = 0x37CF; // hexadecimal
 // let third: number = 0o377; // octal
 // let fourth: number = 0b111001; // binary
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // console.log(first);
 // console.log(second);
 // console.log(third);
@@ -278,11 +293,21 @@ var Person = /** @class */ (function () {
         this.age = age;
     }
     Person.prototype.getFullName = function () {
-        return this.firstName + ' ' + this.lastName;
+        return this.firstName + " " + this.lastName;
     };
     return Person;
 }());
-var personInfo = new Person(29, 'Ehlullah', 'Karakurt', 29);
-personInfo.id = 2;
-console.log(personInfo.id);
-console.log(personInfo.getFullName());
+var Employee = /** @class */ (function (_super) {
+    __extends(Employee, _super);
+    function Employee(id, firstName, lastName, age) {
+        return _super.call(this, id, firstName, lastName, age) || this;
+    }
+    return Employee;
+}(Person));
+var employee = new Employee(1, "Ehlullah", "Karakurt", 29);
+console.log(employee);
+console.log(employee.getFullName());
+// let personInfo = new Person(29, "Ehlullah", "Karakurt", 29);
+// personInfo.id = 100;
+// console.log(personInfo.id);
+// console.log(personInfo.getFullName());
