@@ -446,16 +446,34 @@
 interface Person {
   firstName: string;
   lastName: string;
+  middleName?: string;
 }
 
 function getFullName(person: Person): string {
+  if (person.middleName) {
+    return `${person.firstName} ${person.middleName} ${person.lastName}`;
+  }
   return `${person.firstName} ${person.lastName}`;
 }
 
-let person = {
+let person: Person = {
   firstName: "Ehlullah",
   lastName: "Karakurt",
-  age: 20
+  // middleName: "Merve",
 };
 
+// person.firstName = "Merve";
+
 console.log(getFullName(person));
+
+interface StringFormat {
+  (str: string, isUpper: boolean): string;
+}
+
+let format: StringFormat;
+
+format = function (str: string, isUpper: boolean): string {
+  return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+}
+
+console.log(format(getFullName(person), false));
