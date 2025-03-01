@@ -392,23 +392,53 @@
 
 // console.log(personInfo.getFullName());
 
-class Circle {
-  static pi: number = 3.14;
-  pi = 3;
+// class Circle {
+//   static pi: number = 3.14;
+//   pi = 3;
 
-  constructor() {
-    this.pi++;
-    Circle.pi++;
+//   constructor() {
+//     this.pi++;
+//     Circle.pi++;
+//   }
+
+//   static calculateArea(radius: number): number {
+//     return this.pi * radius * radius;
+//   }
+// }
+
+// let circle = new Circle();
+// let circle2 = new Circle();
+// console.log(circle2.pi);
+
+// console.log(Circle.pi);
+// console.log(Circle.calculateArea(5));
+
+abstract class Department {
+  constructor(public name: string) {}
+
+  printName(): void {
+    console.log("Department name: " + this.name);
   }
 
-  static calculateArea(radius: number): number {
-    return this.pi * radius * radius;
-  }
+  abstract printMeeting(): void;
+  abstract generateReports(): void;
 }
 
-let circle = new Circle();
-let circle2 = new Circle();
-console.log(circle2.pi);
+class AccountingDepartment extends Department {
+  constructor() {
+    super("Accounting and Auditing");
+  }
+  printMeeting(): void {
+    console.log("The Accounting Department meets each Monday at 10am.");
+  }
 
-console.log(Circle.pi);
-console.log(Circle.calculateArea(5));
+  generateReports(): void {
+    console.log("Generating accounting reports...");
+  }
+}
+let department: Department;
+department = new AccountingDepartment();
+// let department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReports();

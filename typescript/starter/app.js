@@ -2,6 +2,21 @@
 // let second: number = 0x37CF; // hexadecimal
 // let third: number = 0o377; // octal
 // let fourth: number = 0b111001; // binary
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // console.log(first);
 // console.log(second);
 // console.log(third);
@@ -297,20 +312,47 @@
 // personInfo.id = 100;
 // console.log(personInfo.id);
 // console.log(personInfo.getFullName());
-var Circle = /** @class */ (function () {
-    function Circle() {
-        this.pi = 3;
-        this.pi++;
-        Circle.pi++;
+// class Circle {
+//   static pi: number = 3.14;
+//   pi = 3;
+//   constructor() {
+//     this.pi++;
+//     Circle.pi++;
+//   }
+//   static calculateArea(radius: number): number {
+//     return this.pi * radius * radius;
+//   }
+// }
+// let circle = new Circle();
+// let circle2 = new Circle();
+// console.log(circle2.pi);
+// console.log(Circle.pi);
+// console.log(Circle.calculateArea(5));
+var Department = /** @class */ (function () {
+    function Department(name) {
+        this.name = name;
     }
-    Circle.calculateArea = function (radius) {
-        return this.pi * radius * radius;
+    Department.prototype.printName = function () {
+        console.log("Department name: " + this.name);
     };
-    Circle.pi = 3.14;
-    return Circle;
+    return Department;
 }());
-var circle = new Circle();
-var circle2 = new Circle();
-console.log(circle2.pi);
-console.log(Circle.pi);
-console.log(Circle.calculateArea(5));
+var AccountingDepartment = /** @class */ (function (_super) {
+    __extends(AccountingDepartment, _super);
+    function AccountingDepartment() {
+        return _super.call(this, "Accounting and Auditing") || this;
+    }
+    AccountingDepartment.prototype.printMeeting = function () {
+        console.log("The Accounting Department meets each Monday at 10am.");
+    };
+    AccountingDepartment.prototype.generateReports = function () {
+        console.log("Generating accounting reports...");
+    };
+    return AccountingDepartment;
+}(Department));
+var department;
+department = new AccountingDepartment();
+// let department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReports();
