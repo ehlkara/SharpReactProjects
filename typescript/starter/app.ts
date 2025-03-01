@@ -413,32 +413,49 @@
 // console.log(Circle.pi);
 // console.log(Circle.calculateArea(5));
 
-abstract class Department {
-  constructor(public name: string) {}
+// abstract class Department {
+//   constructor(public name: string) {}
 
-  printName(): void {
-    console.log("Department name: " + this.name);
-  }
+//   printName(): void {
+//     console.log("Department name: " + this.name);
+//   }
 
-  abstract printMeeting(): void;
-  abstract generateReports(): void;
+//   abstract printMeeting(): void;
+//   abstract generateReports(): void;
+// }
+
+// class AccountingDepartment extends Department {
+//   constructor() {
+//     super("Accounting and Auditing");
+//   }
+//   printMeeting(): void {
+//     console.log("The Accounting Department meets each Monday at 10am.");
+//   }
+
+//   generateReports(): void {
+//     console.log("Generating accounting reports...");
+//   }
+// }
+// let department: Department;
+// department = new AccountingDepartment();
+// // let department = new AccountingDepartment();
+// department.printName();
+// department.printMeeting();
+// department.generateReports();
+
+interface Person {
+  firstName: string;
+  lastName: string;
 }
 
-class AccountingDepartment extends Department {
-  constructor() {
-    super("Accounting and Auditing");
-  }
-  printMeeting(): void {
-    console.log("The Accounting Department meets each Monday at 10am.");
-  }
-
-  generateReports(): void {
-    console.log("Generating accounting reports...");
-  }
+function getFullName(person: Person): string {
+  return `${person.firstName} ${person.lastName}`;
 }
-let department: Department;
-department = new AccountingDepartment();
-// let department = new AccountingDepartment();
-department.printName();
-department.printMeeting();
-department.generateReports();
+
+let person = {
+  firstName: "Ehlullah",
+  lastName: "Karakurt",
+  age: 20
+};
+
+console.log(getFullName(person));
