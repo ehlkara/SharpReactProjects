@@ -520,39 +520,87 @@
 // let employee2 = new Employee(5, "Ehlullah", "Male");
 // console.log(employee2);
 
-interface BusinessPartner {
-  name: string;
-  credit: number;
+// interface BusinessPartner {
+//   name: string;
+//   credit: number;
+// }
+
+// interface Identity {
+//   name: string;
+//   id: number;
+// }
+
+// interface Contact {
+//   phone: string;
+//   email: string;
+// }
+
+// type Employee = Identity & Contact;
+
+// let person: Employee = {
+//   name: "Ehlullah",
+//   id: 1,
+//   phone: "123456789",
+//   email: "test@test.com",
+// };
+
+// console.log(person);
+
+// type Customer = BusinessPartner & Contact;
+
+// let myCustomer: Customer = {
+//   name: "Ehlullah",
+//   credit: 1000,
+//   phone: "123456789",
+//   email: "test@testmail.com",
+// };
+
+// console.log(myCustomer);
+
+type type = string | number;
+
+function add(a: type, b: type) {
+  if (typeof a === "string" && typeof b === "string") {
+    return a.concat(b);
+  } else if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  }
+  throw new Error("Please enter correct types.");
 }
 
-interface Identity {
-  name: string;
-  id: number;
+console.log(add(2, 3));
+
+console.log(add("Ehlullah", " Karakurt"));
+
+// console.log(add("Ehlullah", 3));
+
+class Customer {
+  isCreditAllowed(): boolean {
+    return true;
+  }
 }
 
-interface Contact {
-  phone: string;
-  email: string;
+class Supplier {
+  isInShortList(): boolean {
+    return true;
+  }
 }
 
-type Employee = Identity & Contact;
+type BusinessPartner = Customer | Supplier;
 
-let person: Employee = {
-  name: "Ehlullah",
-  id: 1,
-  phone: "123456789",
-  email: "test@test.com",
-};
+function signContract(partner: BusinessPartner): string {
+  let message: string;
+  if (partner instanceof Customer) {
+      message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+  }
 
-console.log(person);
+  if (partner instanceof Supplier) {
+      message = partner.isInShortList() ? 'Sign a new contract the supplier' : 'Need to evaluate further';
+  }
+  return message;
+}
 
-type Customer = BusinessPartner & Contact;
+let customer: Customer = new Customer();
 
-let myCustomer: Customer = {
-  name: "Ehlullah",
-  credit: 1000,
-  phone: "123456789",
-  email: "test@testmail.com",
-};
-
-console.log(myCustomer);
+var result = signContract(customer);
+console.log(result);
