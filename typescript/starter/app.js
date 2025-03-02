@@ -2,25 +2,17 @@
 // let second: number = 0x37CF; // hexadecimal
 // let third: number = 0o377; // octal
 // let fourth: number = 0b111001; // binary
-var employee = {
-    empNumber: 1,
+var person = {
     name: "Ehlullah",
-    gender: "Male",
+    id: 1,
+    phone: "123456789",
+    email: "test@test.com",
 };
-var employeeDeparment = {
-    empDepartment: "Software Department",
+console.log(person);
+var myCustomer = {
     name: "Ehlullah",
-    gender: "Male",
+    credit: 1000,
+    phone: "123456789",
+    email: "test@testmail.com",
 };
-console.log(employee);
-console.log(employeeDeparment);
-var Employee = /** @class */ (function () {
-    function Employee(empNumber, name, gender) {
-        this.empNumber = empNumber;
-        this.name = name;
-        this.gender = gender;
-    }
-    return Employee;
-}());
-var employee2 = new Employee(5, "Ehlullah", "Male");
-console.log(employee2);
+console.log(myCustomer);

@@ -478,44 +478,81 @@
 
 // console.log(format(getFullName(person), false));
 
-interface IPerson {
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// interface IEmployee extends IPerson {
+//   empNumber: number;
+// }
+
+// interface IWorker extends IPerson {
+//   empDepartment: string;
+// }
+
+// let employee: IEmployee = {
+//   empNumber: 1,
+//   name: "Ehlullah",
+//   gender: "Male",
+// };
+
+// let employeeDeparment: IWorker = {
+//   empDepartment: "Software Department",
+//   name: "Ehlullah",
+//   gender: "Male",
+// };
+
+// console.log(employee);
+// console.log(employeeDeparment);
+
+// class Employee implements IPerson {
+//   empNumber: number;
+//   name: string;
+//   gender: string;
+//   constructor(empNumber: number, name: string, gender: string) {
+//     this.empNumber = empNumber;
+//     this.name = name;
+//     this.gender = gender;
+//   }
+// }
+
+// let employee2 = new Employee(5, "Ehlullah", "Male");
+// console.log(employee2);
+
+interface BusinessPartner {
   name: string;
-  gender: string;
+  credit: number;
 }
 
-interface IEmployee extends IPerson {
-  empNumber: number;
+interface Identity {
+  name: string;
+  id: number;
 }
 
-interface IWorker extends IPerson {
-  empDepartment: string;
+interface Contact {
+  phone: string;
+  email: string;
 }
 
-let employee: IEmployee = {
-  empNumber: 1,
+type Employee = Identity & Contact;
+
+let person: Employee = {
   name: "Ehlullah",
-  gender: "Male",
+  id: 1,
+  phone: "123456789",
+  email: "test@test.com",
 };
 
-let employeeDeparment: IWorker = {
-  empDepartment: "Software Department",
+console.log(person);
+
+type Customer = BusinessPartner & Contact;
+
+let myCustomer: Customer = {
   name: "Ehlullah",
-  gender: "Male",
+  credit: 1000,
+  phone: "123456789",
+  email: "test@testmail.com",
 };
 
-console.log(employee);
-console.log(employeeDeparment);
-
-class Employee implements IPerson {
-  empNumber: number;
-  name: string;
-  gender: string;
-  constructor(empNumber: number, name: string, gender: string) {
-    this.empNumber = empNumber;
-    this.name = name;
-    this.gender = gender;
-  }
-}
-
-let employee2 = new Employee(5, "Ehlullah", "Male");
-console.log(employee2);
+console.log(myCustomer);
