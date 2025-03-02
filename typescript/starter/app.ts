@@ -557,50 +557,84 @@
 
 // console.log(myCustomer);
 
-type type = string | number;
+// type type = string | number;
 
-function add(a: type, b: type) {
-  if (typeof a === "string" && typeof b === "string") {
-    return a.concat(b);
-  } else if (typeof a === "number" && typeof b === "number") {
-    return a + b;
-  }
-  throw new Error("Please enter correct types.");
+// function add(a: type, b: type) {
+//   if (typeof a === "string" && typeof b === "string") {
+//     return a.concat(b);
+//   } else if (typeof a === "number" && typeof b === "number") {
+//     return a + b;
+//   }
+//   throw new Error("Please enter correct types.");
+// }
+
+// console.log(add(2, 3));
+
+// console.log(add("Ehlullah", " Karakurt"));
+
+// // console.log(add("Ehlullah", 3));
+
+// class Customer {
+//   isCreditAllowed(): boolean {
+//     return true;
+//   }
+// }
+
+// class Supplier {
+//   isInShortList(): boolean {
+//     return true;
+//   }
+// }
+
+// type BusinessPartner = Customer | Supplier;
+
+// function signContract(partner: BusinessPartner): string {
+//   let message: string;
+//   if (partner instanceof Customer) {
+//       message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+//   }
+
+//   if (partner instanceof Supplier) {
+//       message = partner.isInShortList() ? 'Sign a new contract the supplier' : 'Need to evaluate further';
+//   }
+//   return message;
+// }
+
+// let customer: Customer = new Customer();
+
+// var result = signContract(customer);
+// console.log(result);
+
+function getRandomNumber(items: number[]): number {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
 }
 
-console.log(add(2, 3));
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let random = getRandomNumber(numbers);
+console.log(random);
 
-console.log(add("Ehlullah", " Karakurt"));
-
-// console.log(add("Ehlullah", 3));
-
-class Customer {
-  isCreditAllowed(): boolean {
-    return true;
-  }
+function getRandomString(items: string[]): string {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
 }
 
-class Supplier {
-  isInShortList(): boolean {
-    return true;
-  }
+let myNames = ["Ehlullah", "Merve", "Karakurt"];
+let randomName = getRandomString(myNames);
+console.log(randomName);
+
+// function getRandomElement(items: any[]): any {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+
+function getRandomElement<T>(items: T[]): T {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
 }
 
-type BusinessPartner = Customer | Supplier;
+let parameters = [true, false, true];
 
-function signContract(partner: BusinessPartner): string {
-  let message: string;
-  if (partner instanceof Customer) {
-      message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
-  }
-
-  if (partner instanceof Supplier) {
-      message = partner.isInShortList() ? 'Sign a new contract the supplier' : 'Need to evaluate further';
-  }
-  return message;
-}
-
-let customer: Customer = new Customer();
-
-var result = signContract(customer);
-console.log(result);
+console.log(getRandomElement<number>(numbers));
+console.log(getRandomElement<string>(myNames));
+console.log(getRandomElement<boolean>(parameters));
