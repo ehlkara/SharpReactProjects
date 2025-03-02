@@ -646,45 +646,85 @@
 // let person = merge({ name: "Ehlullah" }, { age: 29 });
 // console.log(person);
 
-interface Months<U, V> {
-  key: U;
-  value: V;
-}
+// interface Months<U, V> {
+//   key: U;
+//   value: V;
+// }
 
-let month: Months<number, string> = {
-  key: 1,
-  value: "January",
-};
+// let month: Months<number, string> = {
+//   key: 1,
+//   value: "January",
+// };
 
-console.log(month);
+// console.log(month);
 
-interface Collection<T> {
-  add(item: T): void;
-  remove(item: T): void;
-}
+// interface Collection<T> {
+//   add(item: T): void;
+//   remove(item: T): void;
+// }
 
-class List<T> implements Collection<T> {
-  private items: T[] = [];
+// class List<T> implements Collection<T> {
+//   private items: T[] = [];
 
-  add(item: T): void {
-    this.items.push(item);
+//   add(item: T): void {
+//     this.items.push(item);
+//   }
+
+//   remove(item: T): void {
+//     let index = this.items.indexOf(item);
+//     if (index > -1) {
+//       this.items.splice(index, 1);
+//     }
+//   }
+
+//   getAll(): T[] {
+//     return this.items;
+//   }
+// }
+
+// let numbers = new List<number>();
+// for (let i = 0; i < 10; i++) {
+//   numbers.add(i);
+// }
+
+// console.log(numbers.getAll());
+
+class Stack<T> {
+  private elements: T[] = [];
+  constructor(private size: number) {}
+  isEmpty(): boolean {
+    return this.elements.length === 0;
   }
-
-  remove(item: T): void {
-    let index = this.items.indexOf(item);
-    if (index > -1) {
-      this.items.splice(index, 1);
+  isFull(): boolean {
+    return this.elements.length === this.size;
+  }
+  push(element: T): void {
+    if(this.elements.length === this.size) {
+      throw new Error('The stack is overflow!');
     }
+    this.elements.push(element);
   }
-
-  getAll(): T[] {
-    return this.items;
+  pop():T{
+    if(this.elements.length == 0) {
+      throw new Error('The stack is empty!');
+    }
+    return this.elements.pop();
   }
 }
 
-let numbers = new List<number>();
-for (let i = 0; i < 10; i++) {
-  numbers.add(i);
+function randBetween(low: number, high: number): number {
+  return Math.floor(Math.random() * (high - low + 1) + low);
 }
 
-console.log(numbers.getAll());
+let numbers = new Stack<number>(5);
+
+while(!numbers.isFull()){
+  let n = randBetween(1, 10);
+  console.log(`Push ${n} into the stack.`);
+  numbers.push(n);
+}
+
+while(!numbers.isEmpty()){
+  let n = numbers.pop();
+  console.log(`Pop ${n} from the stack.`);
+}
