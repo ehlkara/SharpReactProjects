@@ -639,9 +639,52 @@
 // console.log(getRandomElement<string>(myNames));
 // console.log(getRandomElement<boolean>(parameters));
 
-function merge<T extends object, U extends object>(obj1: T, obj2: U) {
-  return { ...obj1, ...obj2 };
+// function merge<T extends object, U extends object>(obj1: T, obj2: U) {
+//   return { ...obj1, ...obj2 };
+// }
+
+// let person = merge({ name: "Ehlullah" }, { age: 29 });
+// console.log(person);
+
+interface Months<U, V> {
+  key: U;
+  value: V;
 }
 
-let person = merge({ name: "Ehlullah" }, { age: 29 });
-console.log(person);
+let month: Months<number, string> = {
+  key: 1,
+  value: "January",
+};
+
+console.log(month);
+
+interface Collection<T> {
+  add(item: T): void;
+  remove(item: T): void;
+}
+
+class List<T> implements Collection<T> {
+  private items: T[] = [];
+
+  add(item: T): void {
+    this.items.push(item);
+  }
+
+  remove(item: T): void {
+    let index = this.items.indexOf(item);
+    if (index > -1) {
+      this.items.splice(index, 1);
+    }
+  }
+
+  getAll(): T[] {
+    return this.items;
+  }
+}
+
+let numbers = new List<number>();
+for (let i = 0; i < 10; i++) {
+  numbers.add(i);
+}
+
+console.log(numbers.getAll());
