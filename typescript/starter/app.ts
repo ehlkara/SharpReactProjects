@@ -605,36 +605,43 @@
 // var result = signContract(customer);
 // console.log(result);
 
-function getRandomNumber(items: number[]): number {
-  let randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}
-
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let random = getRandomNumber(numbers);
-console.log(random);
-
-function getRandomString(items: string[]): string {
-  let randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}
-
-let myNames = ["Ehlullah", "Merve", "Karakurt"];
-let randomName = getRandomString(myNames);
-console.log(randomName);
-
-// function getRandomElement(items: any[]): any {
+// function getRandomNumber(items: number[]): number {
 //   let randomIndex = Math.floor(Math.random() * items.length);
 //   return items[randomIndex];
 // }
 
-function getRandomElement<T>(items: T[]): T {
-  let randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let random = getRandomNumber(numbers);
+// console.log(random);
+
+// function getRandomString(items: string[]): string {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+
+// let myNames = ["Ehlullah", "Merve", "Karakurt"];
+// let randomName = getRandomString(myNames);
+// console.log(randomName);
+
+// // function getRandomElement(items: any[]): any {
+// //   let randomIndex = Math.floor(Math.random() * items.length);
+// //   return items[randomIndex];
+// // }
+
+// function getRandomElement<T>(items: T[]): T {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+
+// let parameters = [true, false, true];
+
+// console.log(getRandomElement<number>(numbers));
+// console.log(getRandomElement<string>(myNames));
+// console.log(getRandomElement<boolean>(parameters));
+
+function merge<T extends object, U extends object>(obj1: T, obj2: U) {
+  return { ...obj1, ...obj2 };
 }
 
-let parameters = [true, false, true];
-
-console.log(getRandomElement<number>(numbers));
-console.log(getRandomElement<string>(myNames));
-console.log(getRandomElement<boolean>(parameters));
+let person = merge({ name: "Ehlullah" }, { age: 29 });
+console.log(person);

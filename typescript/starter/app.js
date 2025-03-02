@@ -2,6 +2,17 @@
 // let second: number = 0x37CF; // hexadecimal
 // let third: number = 0o377; // octal
 // let fourth: number = 0b111001; // binary
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 // console.log(first);
 // console.log(second);
 // console.log(third);
@@ -462,29 +473,34 @@
 // let customer: Customer = new Customer();
 // var result = signContract(customer);
 // console.log(result);
-function getRandomNumber(items) {
-    var randomIndex = Math.floor(Math.random() * items.length);
-    return items[randomIndex];
-}
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var random = getRandomNumber(numbers);
-console.log(random);
-function getRandomString(items) {
-    var randomIndex = Math.floor(Math.random() * items.length);
-    return items[randomIndex];
-}
-var myNames = ["Ehlullah", "Merve", "Karakurt"];
-var randomName = getRandomString(myNames);
-console.log(randomName);
-// function getRandomElement(items: any[]): any {
+// function getRandomNumber(items: number[]): number {
 //   let randomIndex = Math.floor(Math.random() * items.length);
 //   return items[randomIndex];
 // }
-function getRandomElement(items) {
-    var randomIndex = Math.floor(Math.random() * items.length);
-    return items[randomIndex];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let random = getRandomNumber(numbers);
+// console.log(random);
+// function getRandomString(items: string[]): string {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+// let myNames = ["Ehlullah", "Merve", "Karakurt"];
+// let randomName = getRandomString(myNames);
+// console.log(randomName);
+// // function getRandomElement(items: any[]): any {
+// //   let randomIndex = Math.floor(Math.random() * items.length);
+// //   return items[randomIndex];
+// // }
+// function getRandomElement<T>(items: T[]): T {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+// let parameters = [true, false, true];
+// console.log(getRandomElement<number>(numbers));
+// console.log(getRandomElement<string>(myNames));
+// console.log(getRandomElement<boolean>(parameters));
+function merge(obj1, obj2) {
+    return __assign(__assign({}, obj1), obj2);
 }
-var parameters = [true, false, true];
-console.log(getRandomElement(numbers));
-console.log(getRandomElement(myNames));
-console.log(getRandomElement(parameters));
+var person = merge({ name: "Ehlullah" }, { age: 29 });
+console.log(person);
