@@ -1,5 +1,3 @@
-import React from 'react'
-
 type RequestProps = {
     status: 'loading' | 'success' | 'error';
 }

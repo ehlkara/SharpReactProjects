@@ -1,6 +1,4 @@
-import React from 'react';
 import { instructorProps } from './propstypes';
-
 
 export default function Instructor(props: instructorProps) {
     return (

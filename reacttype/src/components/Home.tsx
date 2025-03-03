@@ -1,4 +1,3 @@
-import React from 'react'
 import { DataComing } from './propstypes';
 
 export default function Home(props: DataComing) {
