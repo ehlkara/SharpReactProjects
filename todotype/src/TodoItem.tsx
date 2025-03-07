@@ -1,4 +1,3 @@
-import React from 'react'
 import { todoType } from './appTypes'
 
 type PropsType = {
