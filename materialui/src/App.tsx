@@ -54,8 +54,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        {/* <LessonTypography/> */}
-        {/* <LessonButton/> */}
+        <LessonTypography/>
+        <LessonButton/>
         {/* <LessonButtonGroup/> */}
         {/* <LessonTextField/> */}
         {/* <LessonRadioGroup /> */}
@@ -71,7 +71,7 @@ function App() {
         {/* <LessonAppBar /> */}
         {/* <LessonImageList /> */}
         {/* <LessonPaper /> */}
-        {/* <LessonLink /> */}
+        <LessonLink />
         {/* <LessonBreadsCrump /> */}
         {/* <LessonDrawer /> */}
         {/* <LessonBadge /> */}
